@@ -1,0 +1,73 @@
+img {
+    vertical-align: bottom;
+}
+
+body {
+    overflow: hidden;
+}
+
+#page_container {
+    display: inline-block;
+}
+
+#main_container {
+    display: inline-block;
+    margin: 0 auto;
+    position: relative;
+}
+
+#game_container {
+    float: left;
+    clear: none;
+}
+
+#settings_container {
+    margin-bottom: 0px;
+    margin-top: 30px;
+    height: 7vh;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.cell {
+    height: 3.5vh;
+    width: 3.5vh;
+    float: left;
+}
+
+.smallCell {
+    height: 1.5vh;
+    width: 1.5vh;
+    float: left;
+}
+
+@font-face {
+    font-family: dots;
+    src: url(assets/DS-DIGIT.TTF);
+}
+
+.counter {
+    font-family: dots;
+    font-size: 5vh;
+    float: left;
+}
+
+p {
+    margin-bottom: 0px;
+}
+
+.col-sm-3 {
+    margin-top: 20px;
+    padding-bottom: 20vh;
+    margin-bottom: 20vh;
+}
+
+h1 {
+    margin-bottom: 0px;
+    margin-left: 30px;
+    margin-top: 0px;
+}
+
+#timer {
+    float: right;
+}
