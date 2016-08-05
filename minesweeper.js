@@ -112,8 +112,8 @@ $(function () {
             size = $("#size").val();
             numBombs = $("#numBombs").val();
 
-            if (size > 50)
-                size = 50;
+            if (size > 60)
+                size = 60;
             if (size < 15)
                 size = 15;
 
@@ -192,15 +192,18 @@ $(function () {
     });
 
     var display = function () {
-        $("#game_container").html("");
+        var htmlToAppend = '';
+        $("#game_container").empty();
         for (var i = 0; i < width; i++) {
-            $("#game_container").append("<row>")
+            htmlToAppend += '<row>';
             for (var j = 0; j < height; j++) {
                 var k = board[i][j];
-                $("#game_container").append("<img class=\"cell\" style=\"height:" + cell_size + "vh; width:" + cell_size + "vh\" id=\"" + "b_" + k.xVal + "_" + k.yVal + "\" src=\"" + k.image + "\">");
+                htmlToAppend += "<img class=\"cell\" style=\"height:" + cell_size + "vh; width:" + cell_size + "vh\" id=\"" + "b_" + k.xVal + "_" + k.yVal + "\" src=\"" + k.image + "\">";
             }
-            $("#game_container").append("</row>");
+            htmlToAppend += "</row>";
         }
+
+        $('#game_container').append(htmlToAppend);
     };
 
     $(window).resize(function () {
